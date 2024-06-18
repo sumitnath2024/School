@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScholaFlex | Organize Media</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition register-page">
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Organize Media</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Add Category</h3>
+              </div>
+              <form id="categoryForm">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="category_name">Category Name</label>
+                    <input type="text" class="form-control" id="category_name" required>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary" onclick="addCategory()">Add Category</button>
+                </div>
+              </form>
+            </div>
+            <div class="card card-secondary">
+              <div class="card-header">
+                <h3 class="card-title">Category List</h3>
+              </div>
+              <div class="card-body">
+                <table class="table table-bordered" id="category_list">
+                  <thead>
+                    <tr>
+                      <th>Category Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Category list will be populated here dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<!-- Firebase Storage -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<!-- Firebase Config -->
+<script src="../assets/js/firebase-config.js"></script>
+<!-- Organize Media Script -->
+<script src="../assets/js/organize_media.js"></script>
+</body>
+</html>

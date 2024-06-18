@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScholaFlex | Post Assignments</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition register-page">
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Post Assignments</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Create New Assignment</h3>
+              </div>
+              <form id="assignmentForm">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="class">Class</label>
+                    <select id="class" class="form-control" required>
+                      <option value="">Select Class</option>
+                      <!-- Classes will be populated here dynamically -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="section">Section</label>
+                    <select id="section" class="form-control" required>
+                      <option value="">Select Section</option>
+                      <!-- Sections will be populated here dynamically -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="assignment_title">Assignment Title</label>
+                    <input type="text" class="form-control" id="assignment_title" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="assignment_description">Assignment Description</label>
+                    <textarea id="assignment_description" class="form-control" rows="4" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="due_date">Due Date</label>
+                    <input type="date" class="form-control" id="due_date" required>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary" onclick="postAssignment()">Post Assignment</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<!-- Firebase Config -->
+<script src="../assets/js/firebase-config.js"></script>
+<!-- Post Assignments Script -->
+<script src="../assets/js/post_assignments.js"></script>
+</body>
+</html>

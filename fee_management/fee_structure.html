@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScholaFlex | Fee Structure</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition register-page">
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Fee Structure</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Create Fee Structure</h3>
+              </div>
+              <form id="feeStructureForm">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="class">Class</label>
+                    <select id="class" class="form-control" required>
+                      <option value="">Select Class</option>
+                      <!-- Classes will be populated here dynamically -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="fee_type">Fee Type</label>
+                    <select id="fee_type" class="form-control" required>
+                      <option value="">Select Fee Type</option>
+                      <option value="tuition">Tuition</option>
+                      <option value="transport">Transport</option>
+                      <option value="library">Library</option>
+                      <!-- More fee types can be added here -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" class="form-control" id="amount" required>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary" onclick="addFeeStructure()">Add Fee Structure</button>
+                </div>
+              </form>
+            </div>
+            <div class="card card-secondary">
+              <div class="card-header">
+                <h3 class="card-title">Fee List</h3>
+              </div>
+              <div class="card-body">
+                <ul class="list-group" id="fee_list">
+                  <!-- Fee list will be populated here dynamically -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<!-- Firebase Config -->
+<script src="../assets/js/firebase-config.js"></script>
+<!-- Fee Structure Script -->
+<script src="../assets/js/fee_structure.js"></script>
+</body>
+</html>

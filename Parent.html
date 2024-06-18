@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScholaFlex | Parent Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">ScholaFlex</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+          <a href="#" class="d-block" id="user-name">Alexander Pierce</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Dashboard -->
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="dashboard_overview.html" target="iframe-content" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Overview</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Attendance Management -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-calendar-check"></i>
+              <p>
+                Attendance Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="attendance_management/view_child_attendance.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child Attendance</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Timetable Management -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-clock"></i>
+              <p>
+                Timetable Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="timetable_management/view_child_schedule.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child Schedule</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Academic Management -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-school"></i>
+              <p>
+                Academic Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="academic_management/view_child_subjects.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child Subjects</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Report Cards -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-file-alt"></i>
+              <p>
+                Report Cards
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="report_cards/view_child_report_cards.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child Report Cards</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Homework & Assignments -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Homework & Assignments
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="homework_assignments/view_child_assignments.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child Assignments</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Communication Tools -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-comments"></i>
+              <p>
+                Communication Tools
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="communication_tools/send_messages.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Send Messages</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Library Management -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book-reader"></i>
+              <p>
+                Library Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="library_management/view_child_borrowing_history.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child Borrowing History</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Gallery Management -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-photo-video"></i>
+              <p>
+                Gallery Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="gallery_management/view_photos.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Photos</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Stationery Management -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-boxes"></i>
+              <p>
+                Stationery Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="stationery_management/purchase_special_items.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Purchase Special Items</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Online Classes -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chalkboard"></i>
+              <p>
+                Online Classes
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="online_classes/access_child_recordings.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Access Child Recordings</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- AI Insights -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-line"></i>
+              <p>
+                AI Insights
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="ai_insights/view_child_performance.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child Performance</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Behavioral Tracking -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-line"></i>
+              <p>
+                Behavioral Tracking
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="behavioral_tracking/view_child_behavioral_reports.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child Behavioral Reports</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Parent Engagement -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-handshake"></i>
+              <p>
+                Parent Engagement
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="parent_engagement/schedule_meetings.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Schedule Meetings</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Health & Wellness -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-heartbeat"></i>
+              <p>
+                Health & Wellness
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="health_wellness/view_child_health_records.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child Health Records</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- E-learning Integration -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-laptop"></i>
+              <p>
+                E-learning Integration
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="elearning_integration/monitor_child_activities.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Monitor Child Activities</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Event Management -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-calendar-alt"></i>
+              <p>
+                Event Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="event_management/view_child_participation.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child Participation</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- AR Learning -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-vr-cardboard"></i>
+              <p>
+                AR Learning
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="ar_learning/view_child_ar_learning.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Child AR Learning</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Transportation Management -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-bus"></i>
+              <p>
+                Transportation Management
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="transportation_management/monitor_child_bus_schedule.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Monitor Child Bus Schedule</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Surveys -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-poll"></i>
+              <p>
+                Surveys
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="feedback_surveys/participate_surveys.html" target="iframe-content" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Participate in Surveys</p>
+                </a>
+              </li>
+            </ul>
+          </li>       
+
+        </ul>
+      </nav>
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Content Header -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Parent Dashboard</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Parent Dashboard</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Add your content here -->
+        <iframe src="dashboard_overview.html" name="iframe-content" style="width: 100%; height: 100vh; border: none;"></iframe>
+      </div>
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2024 <a href="#">ScholaFlex</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0.0
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+  </aside>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+
+<script>
+  // Simulating fetching username from the server or local storage
+  const username = localStorage.getItem('username') || 'User Name';
+
+  // Set the username in the sidebar
+  document.getElementById('user-name').textContent = username;
+
+  // Save the username in local storage for demonstration purposes
+  // Remove or replace this line in production
+  localStorage.setItem('username', 'Alexander Pierce');
+</script>
+</body>
+</html>

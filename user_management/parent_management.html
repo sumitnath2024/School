@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScholaFlex | Parent Management</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition register-page">
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Parent Management</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Manage Parents</h3>
+              </div>
+              <form id="parentForm">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="parent_id">Parent ID</label>
+                    <input type="text" class="form-control" id="parent_id" placeholder="Enter Parent ID" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter Address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="contact_no">Contact No</label>
+                    <input type="text" class="form-control" id="contact_no" placeholder="Enter Contact No" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="children">Children</label>
+                    <input type="text" class="form-control" id="children" placeholder="Enter Children IDs, separated by commas" required>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary" onclick="addParent()">Add Parent</button>
+                  <button type="button" class="btn btn-warning" onclick="updateParent()">Update Parent</button>
+                  <button type="button" class="btn btn-danger" onclick="deleteParent()">Delete Parent</button>
+                  <button type="button" class="btn btn-info" onclick="fetchParents()">Load Parents</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Parent List</h3>
+              </div>
+              <div class="card-body">
+                <table class="table table-bordered" id="parentsTable">
+                  <thead>
+                    <tr>
+                      <th>Parent ID</th>
+                      <th>Name</th>
+                      <th>Address</th>
+                      <th>Email</th>
+                      <th>Contact No</th>
+                      <th>DOB</th>
+                      <th>Children</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Parents data will be populated here dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<!-- Firebase Config -->
+<script src="../assets/js/firebase-config.js"></script>
+<!-- Parent Management Script -->
+<script src="../assets/js/parent_management.js"></script>
+</body>
+</html>

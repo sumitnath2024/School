@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScholaFlex | Event Planning</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition register-page">
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Event Planning</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Add New Event</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="event_name">Event Name</label>
+                  <input type="text" class="form-control" id="event_name" required>
+                </div>
+                <div class="form-group">
+                  <label for="event_date">Event Date</label>
+                  <input type="datetime-local" class="form-control" id="event_date" required>
+                </div>
+                <div class="form-group">
+                  <label for="event_description">Event Description</label>
+                  <textarea class="form-control" id="event_description" rows="3" required></textarea>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary" onclick="addEvent()">Add Event</button>
+              </div>
+            </div>
+            <div class="card card-secondary">
+              <div class="card-header">
+                <h3 class="card-title">Upcoming Events</h3>
+              </div>
+              <div class="card-body">
+                <table class="table table-bordered" id="event_list_table">
+                  <thead>
+                    <tr>
+                      <th>Event Name</th>
+                      <th>Date</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Event list will be populated here dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<!-- Firebase Storage -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<!-- Firebase Config -->
+<script src="../assets/js/firebase-config.js"></script>
+<!-- Event Planning Script -->
+<script src="../assets/js/event_planning.js"></script>
+</body>
+</html>

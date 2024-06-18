@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScholaFlex | Access Learning Content</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../assets/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Access Learning Content -->
+      <div class="card card-default">
+        <div class="card-header">
+          <h3 class="card-title">Access Learning Content</h3>
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+              <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <form id="contentForm">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="contentTitle">Content Title</label>
+                  <input type="text" class="form-control" id="contentTitle" placeholder="Enter Content Title">
+                </div>
+                <div class="form-group">
+                  <label for="contentFile">Content File</label>
+                  <input type="file" class="form-control" id="contentFile">
+                </div>
+                <div class="form-group">
+                  <label for="class">Class</label>
+                  <select class="form-control" id="class">
+                    <option value="">Select Class</option>
+                    <option value="1">Class 1</option>
+                    <option value="2">Class 2</option>
+                    <option value="3">Class 3</option>
+                    <option value="4">Class 4</option>
+                    <option value="5">Class 5</option>
+                    <!-- Add more classes as needed -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="section">Section</label>
+                  <select class="form-control" id="section">
+                    <option value="">Select Section</option>
+                    <option value="A">Section A</option>
+                    <option value="B">Section B</option>
+                    <option value="C">Section C</option>
+                    <!-- Add more sections as needed -->
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- /.row -->
+            <div class="row mt-3">
+              <div class="col-12">
+                <button type="button" class="btn btn-primary" id="fetchContentBtn">Fetch Content</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- Custom Script -->
+<script src="../assets/js/access_learning_content.js"></script>
+</body>
+</html>

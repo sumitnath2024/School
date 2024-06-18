@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScholaFlex | Share Content</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition register-page">
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Share Content</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Upload and Share Content</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="content_title">Content Title</label>
+                  <input type="text" class="form-control" id="content_title" required>
+                </div>
+                <div class="form-group">
+                  <label for="content_file">Content File</label>
+                  <input type="file" class="form-control" id="content_file" required>
+                </div>
+                <div class="form-group">
+                  <label for="class">Class</label>
+                  <select class="form-control" id="class" required></select>
+                </div>
+                <div class="form-group">
+                  <label for="section">Section</label>
+                  <select class="form-control" id="section" required></select>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary" onclick="shareContent()">Share Content</button>
+              </div>
+            </div>
+            <div class="card card-secondary">
+              <div class="card-header">
+                <h3 class="card-title">Shared Content List</h3>
+              </div>
+              <div class="card-body">
+                <table class="table table-bordered" id="shared_content_table">
+                  <thead>
+                    <tr>
+                      <th>Content Title</th>
+                      <th>Class</th>
+                      <th>Section</th>
+                      <th>File</th>
+                      <th>Timestamp</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Shared content list will be populated here dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../dist/js/adminlte.min.js"></script>
+  <!-- Firebase App -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <!-- Firebase Auth -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <!-- Firebase Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <!-- Firebase Storage -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+  <!-- Firebase Config -->
+  <script src="../assets/js/firebase-config.js"></script>
+  <!-- Share Content Script -->
+  <script src="../assets/js/share_content.js"></script>
+</body>
+</html>

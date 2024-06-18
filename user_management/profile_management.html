@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScholaFlex | Profile Management</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  
+</head>
+<body class="hold-transition register-page">
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div>
+            <h3>Profile Management</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Manage Profile</h3>
+              </div>
+              <form id="profileForm">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter Address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="contact_no">Contact No</label>
+                    <input type="text" class="form-control" id="contact_no" placeholder="Enter Contact No" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="parent_spouse_name">Parent/Spouse Name</label>
+                    <input type="text" class="form-control" id="parent_spouse_name" placeholder="Enter Parent or Spouse Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="parent_spouse_contact_no">Parent/Spouse Contact No</label>
+                    <input type="text" class="form-control" id="parent_spouse_contact_no" placeholder="Enter Parent or Spouse Contact No" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" class="form-control" required>
+                      <option value="">Select Role</option>
+                      <option value="student">Student</option>
+                      <option value="teacher">Teacher</option>
+                      <option value="parent">Parent</option>
+                      <option value="admin_staff">Admin Staff</option>
+                      <option value="admin_mgmt">Admin Management</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="ward_name">Ward Name</label>
+                    <input type="text" class="form-control" id="ward_name" placeholder="Enter Ward Name" required>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary" onclick="updateUserProfile()">Update Profile</button>
+                  <button type="button" class="btn btn-info" onclick="loadUserProfile()">Load Profile</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<!-- Firebase Config -->
+<script src="../assets/js/firebase-config.js"></script>
+<!-- Profile Management Script -->
+<script src="../assets/js/profile_management.js"></script>
+</body>
+</html>
